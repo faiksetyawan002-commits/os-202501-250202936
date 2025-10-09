@@ -42,10 +42,11 @@ dmesg | head
 ---
 
 ## Hasil Eksekusi
-Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/example.png)
+ hasil screenshot percobaan atau diagram:
 
----
+
+--<img width="1364" height="767" alt="screenshot wsl" src="https://github.com/user-attachments/assets/60200375-2d88-4ca6-9ecb-c4a5d8db1c4e" />
+-
 
 ## Analisis
 - Jelaskan makna hasil percobaan.  
