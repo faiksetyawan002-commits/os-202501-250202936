@@ -148,7 +148,7 @@ Saat lsmod dijalankan, program melakukan system call seperti open(), read(), dan
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+Sekali lagi, kernel adalah jantung sistem operasi; sistem operasi elementer memberi izin komunikasi antara komponen ssistem operasi dan perangkat keras. Ini juga diperlihatkan oleh kenyataan bahwa perintah lsmod dan dmesg memberikan daftar modul utama dan logger boot-up sistem, masing-masing. Sistem-sistem panggilan adalah petugas penghubung antara user space dan kernel space, sehingga yang membalas hingga aktivitas termina l. Sistemplet user-space ikut meminta jasa dari kernel tanpa harus meributkan ke perangkat kerasnya sehabis itu. WSL2 Linux Environment salah satunya kernel asli linux, karena itu ia menunjukkan informasiwayar modul dan logger sistemnya tanpa melaluicara cara lain – sesuatu yang benar-benar tidak bisa dijumpai di Windows, asalkarena mereka gunakan katajalur kernel dan API sistem yang berbeda.
 
 ---
 
@@ -166,7 +166,8 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 Tuliskan secara singkat:
 - Apa bagian yang paling menantang minggu ini?  
 - Bagaimana cara Anda mengatasinya?  
-
+1.terkendala di laptop karena laptop nya ngelag
+2.dengan meminjam laptop teman
 ---
 
 **Credit:**  
