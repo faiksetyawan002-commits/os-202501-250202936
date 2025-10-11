@@ -154,11 +154,11 @@ Sekali lagi, kernel adalah jantung sistem operasi; sistem operasi elementer memb
 
 ## Quiz
 1. [Pertanyaan 1]  
-   **Jawaban:**  
+   **Jawaban:** Manajemen Sumber Daya, Manajemen Proses dan File, serta Penyediaan Antarmuka Pengguna  
 2. [Pertanyaan 2]  
-   **Jawaban:**  
+   **Jawaban:**  mode kernel memiliki akses penuh ke perangkat keras dan memori sistem, sementara mode pengguna memiliki akses yang dibatasi dan harus melalui system calls untuk meminta layanan dari kernel.
 3. [Pertanyaan 3]  
-   **Jawaban:**  
+   **Jawaban:**  Linux dan Windows
 
 ---
 
