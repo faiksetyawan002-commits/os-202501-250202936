@@ -168,12 +168,12 @@ Kernel Linux adalah bagian terpenting dari sistem operasi yang mengkoordinasikan
 
 ## Quiz
 1. [Sebutkan tiga fungsi utama sistem operasi.]  
-   **Jawaban:Manajemen Sumber Daya, Manajemen Proses dan File, serta Penyediaan Antarmuka Pengguna.**  
+   **Jawaban:** Manajemen Sumber Daya, Manajemen Proses dan File, serta Penyediaan Antarmuka Pengguna.
 2. [Jelaskan perbedaan antara kernel mode dan user mode.]  
-   **Jawaban:Perbedaan utama antara mode kernel dan mode pengguna adalah tingkat akses sumber daya. Mode kernel memberikan akses penuh ke perangkat keras dan memori sistem, di mana inti sistem operasi beroperasi, sedangkan mode pengguna menjalankan aplikasi dengan akses terbatas, hanya dapat meminta sumber daya melalui API sistem untuk menjaga keamanan dan stabilitas.**  
+   **Jawaban:** Perbedaan utama antara mode kernel dan mode pengguna adalah tingkat akses sumber daya. Mode kernel memberikan akses penuh ke perangkat keras dan memori sistem, di mana inti sistem operasi beroperasi, sedangkan mode pengguna menjalankan aplikasi dengan akses terbatas, hanya dapat meminta sumber daya melalui API sistem untuk menjaga keamanan dan stabilitas.
 3. [Sebutkan contoh OS dengan arsitektur monolithic dan microkernel.]  
-   **Jawaban:Monolithic Kernel:Linux, MS-DOS, Unix tradisional
-   MicrokernelMinix, QNX, macOS (XNU hybrid), Mach kernel**  
+   **Jawaban:** Monolithic Kernel:Linux, MS-DOS, Unix tradisional
+   MicrokernelMinix, QNX, macOS (XNU hybrid), Mach kernel
 
 ---
 
