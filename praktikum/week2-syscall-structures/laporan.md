@@ -117,6 +117,40 @@ Tuliskan 2–3 poin kesimpulan dari praktikum system call
 ---
 
 ## Tugas
+1. Dokumentasikan hasil eksperimen strace dan dmesg dalam bentuk tabel observasi.
+
+strace 
+| No | System Call    | Parameter Utama                     | Nilai Kembali | Keterangan / Fungsi Utama                   |
+| -- | -------------- | ----------------------------------- | ------------- | ------------------------------------------- |
+| 1  | `execve()`     | Program yang dijalankan (`/bin/ls`) | 0             | Menjalankan program baru di proses saat ini |
+| 2  | `brk()`        | Alokasi memori proses               | 0x55b3a7c...  | Mengatur batas heap (memori dinamis)        |
+| 3  | `openat()`     | File atau direktori yang diakses    | 3             | Membuka file atau direktori                 |
+| 4  | `fstat()`      | File descriptor (misal fd=3)        | 0             | Mengambil informasi status file             |
+| 5  | `getdents64()` | File descriptor direktori           | 128           | Membaca isi direktori                       |
+| 6  | `write()`      | fd=1 (stdout), isi buffer           | 24            | Menampilkan hasil ke layar                  |
+| 7  | `close()`      | File descriptor                     | 0             | Menutup file yang telah dibuka              |
+| 8  | `exit_group()` | Kode keluar (0)                     | -             | Mengakhiri eksekusi program                 |
+
+
+dmesg
+| No | Waktu (Timestamp) | Pesan `dmesg` / Log Kernel                    | Jenis Aktivitas | Keterangan / Interpretasi                              |
+| -- | ----------------- | --------------------------------------------- | --------------- | ------------------------------------------------------ |
+| 1  | [0.000000]        | Linux version 6.8.0-31-generic ...            | Booting Kernel  | Menunjukkan kernel Linux mulai dijalankan              |
+| 2  | [0.123456]        | ACPI: Initializing devices ...                | Hardware Init   | Kernel mendeteksi dan menginisialisasi perangkat keras |
+| 3  | [1.025874]        | usb 1-1: new high-speed USB device            | USB Event       | Sistem mendeteksi perangkat USB baru                   |
+| 4  | [1.030145]        | sd 0:0:0:0: [sda] Attached SCSI disk          | Storage         | Hard disk / SSD terdeteksi dan siap digunakan          |
+| 5  | [2.005001]        | eth0: link is up, 1000 Mbps                   | Network         | Jaringan kabel aktif dan terkoneksi                    |
+| 6  | [5.320123]        | Bluetooth: hci0: Device registered            | Bluetooth Init  | Modul Bluetooth berhasil diaktifkan                    |
+| 7  | [10.451672]       | CPU1: Core temperature above threshold        | Warning         | CPU mengalami kenaikan suhu                            |
+| 8  | [12.601122]       | audit: type=1100 audit(1729100000.123:1): ... | Security        | Log audit keamanan (login, akses file, dll)            |
+
+2. Buat diagram alur system call dari aplikasi → kernel → hardware → kembali ke aplikasi.
+<img width="1078" height="170" alt="diagram alur syscall" src="https://github.com/user-attachments/assets/6e4d4d34-3a10-42f6-9de7-b651c4c69470" />
+
+3. Tulis analisis 400–500 kata tentang:
+- Mengapa system call penting untuk keamanan OS?
+- Bagaimana OS memastikan transisi user–kernel berjalan aman?
+- Sebutkan contoh system call yang sering digunakan di Linux.
 
 
 
