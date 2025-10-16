@@ -108,6 +108,12 @@ close(3) Menutup file descriptor 3. Setelah ditutup, kernel membebaskan resource
 ## Kesimpulan
 Tuliskan 2–3 poin kesimpulan dari praktikum system call
 
+1. Sebagai antarmuka antara aplikasi dan sistem operasi. Praktikum menunjukkan bahwa system call adalah jembatan yang krusial. Aplikasi tidak dapat berinteraksi langsung dengan sumber daya perangkat keras seperti memori atau penyimpanan. Melalui system call, program yang berjalan di user mode dapat meminta layanan yang disediakan oleh kernel di kernel mode, seperti membuat proses baru (fork) atau mengakses file.
+
+2. Membantu manajemen sumber daya dan proses. Praktikum membuktikan bagaimana system call digunakan untuk mengelola berbagai aspek sistem operasi. Contohnya adalah fungsi fork(), exec(), dan wait() pada UNIX. System call ini memungkinkan program untuk membuat proses baru, menjalankan program lain di dalamnya, dan menunggu hingga proses anak selesai, yang merupakan dasar dari manajemen proses dalam sistem operasi.
+
+3. Memberikan abstraksi dan keamanan. Dengan adanya system call, pengembang aplikasi tidak perlu tahu secara detail bagaimana perangkat keras bekerja. System call menyediakan lapisan abstraksi yang menyederhanakan interaksi dengan sistem. Selain itu, system call juga meningkatkan keamanan karena mencegah aplikasi dari mengakses sumber daya kritis secara langsung, sehingga kernel dapat mengontrol dan memvalidasi setiap permintaan.
+
 ---
 
 ## Quiz
