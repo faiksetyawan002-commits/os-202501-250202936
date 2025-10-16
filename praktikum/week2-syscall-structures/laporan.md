@@ -58,9 +58,9 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari system call:
 ## Kode / Perintah
 Tuliskan potongan kode atau perintah utama:
 ```bash
-uname -a
-lsmod | head
-dmesg | head
+strace ls
+strace -e trace=open,read,write,close cat /etc/passwd
+dmesg | tail -n 10
 ```
 
 ---
@@ -106,7 +106,7 @@ close(3) Menutup file descriptor 3. Setelah ditutup, kernel membebaskan resource
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+Tuliskan 2–3 poin kesimpulan dari praktikum system call
 
 ---
 
@@ -122,8 +122,8 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 
 ## Refleksi Diri
 Tuliskan secara singkat:
-- Apa bagian yang paling menantang minggu ini?  
-- Bagaimana cara Anda mengatasinya?  
+- Apa bagian yang paling menantang minggu ini?  ada masalah pada laptop karena kurang suport pada aplikasi wsl linux
+- Bagaimana cara Anda mengatasinya?  dengan membuka perlahan,maka wsl linux akan berjalan walapaun nunggu nya lumayan lama
 
 ---
 
