@@ -75,7 +75,33 @@ Sertakan screenshot hasil system call:
 - Analisis bagaimana file dibuka, dibaca, dan ditutup oleh kernel?
 - Amati log kernel yang muncul. Apa bedanya output ini dengan output dari program biasa?
 > jawab :
+- system Call Penjelasan Fungsi Analisis Cara Kerja Kernel
+- open("/etc/passwd", O_RDONLY) Membuka file /etc/passwd dalam mode read-only. Kernel memeriksa apakah file tersebut ada, apakah proses cat memiliki izin untuk membacanya, dan jika iya, kernel memberikan file descriptor (biasanya angka 3) kepada proses. Kernel berperan mengatur manajemen file descriptor dan keamanan akses file (melalui permission checking di sistem file).
+- read(3, ... , 4096) Membaca isi file dari file descriptor 3 sebanyak maksimal 4096 byte (ukuran buffer standar). Kernel akan menyalin isi file dari sistem file ke buffer memori user-space program cat. Kernel mengatur transisi data dari storage (disk) ke memori, memastikan hanya bagian file yang diizinkan dapat diakses oleh proses.
+- write(1, ... , 1582) Menulis data ke file descriptor 1 (stdout — layar terminal). Kernel akan menyalin isi buffer tadi ke output terminal pengguna. Kernel menangani output stream, memastikan data dikirim ke perangkat output (terminal) melalui buffer output standar.
+close(3) Menutup file descriptor 3. Setelah ditutup, kernel membebaskan resource yang digunakan oleh file tersebut. Kernel membersihkan tabel file terbuka (file table) untuk proses cat, sehingga descriptor dapat digunakan kembali untuk file lain nanti.
 
+[13.154095] systemd-journald[81]: Collecting audit messages is disabled. Kernel mencatat aktivitas dari proses systemd-journald, yaitu layanan yang menangani logging di sistem Linux. Pesan ini menunjukkan fitur audit sedang dimatikan.
+
+[13.274579] systemd-journald[81]: Received client request to flush runtime journal. Kernel menerima permintaan untuk menyimpan log - sementara (runtime journal) ke disk.
+
+[13.336252] systemd-journald[81]: File .../system.journal corrupted or uncleanly shut down... Kernel mendeteksi file log system.journal rusak atau tidak ditutup dengan benar (mungkin akibat shutdown mendadak), lalu membuat file pengganti.
+
+[14.143751] ACPI: AC: AC Adapter [AC1] (on-line) Kernel mendeteksi adaptor daya (charger) aktif — ini adalah pesan dari subsistem ACPI (Advanced Configuration and Power Interface).
+
+[14.144667] ACPI: battery: Slot [BAT1] (battery present) Kernel mendeteksi baterai laptop terpasang.
+
+[17.482122] WSL (2 - init-systemd(Ubuntu)) ERROR: WaitForBootProcess... Kernel mencatat error pada Windows Subsystem for Linux (WSL2) karena proses inisialisasi systemd tidak selesai tepat waktu.
+
+[27.582691] WSL (2 - Interop) ERROR: CreateLoginSession... Masih terkait WSL2 — kernel melaporkan gagal membuat sesi login karena waktu tung gu habis.
+
+[30.018063] TCP: eth0: Driver has suspect GRO implementation... Kernel memberikan peringatan terkait driver jaringan (eth0), mungkin berpengaruh pada performa TCP.
+
+[48.368303] hv_balloon: Max. dynamic memory size: 4034 MB Kernel Hyper-V (digunakan WSL2) melaporkan ukuran maksimum memori dinamis yang dialokasikan.
+
+[600.986549] mini_init (175): drop_caches: 1 Kernel mencatat perintah pembersihan cache memori (drop_caches) oleh proses mini_init.
+
+- perbedaan Dmesg (dari "display message") adalah perintah yang menampilkan pesan-pesan log dari kernel Linux. Ini mencakup informasi tentang aktivitas kernel, seperti deteksi hardware, pemasangan driver, error kernel, boot messages, dan event sistem lainnya. Output biasa adalah hasil dari perintah atau program yang dijalankan di user space (ruang pengguna), seperti perintah shell standar. Ini bisa berupa teks, data, atau hasil komputasi dari program seperti echo, ls, cat, atau aplikasi seperti Python script
 
 ---
 
@@ -87,7 +113,7 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 ## Quiz
 1. Apa fungsi utama system call dalam sistem operasi? 
    **Jawaban:**  fungsi utaman system call adalah sebagai antarmuka atau jembatan bagi program aplikasi untuk meminta pelayanan sistem operasi(OS)
-2. Sebutkan 4 kategori system call yang umum di gunkanan?
+ 2. Sebutkan 4 kategori system call yang umum di gunkanan?
    **Jawaban:**  kategori system call yang umum digunakan adalah manajemen proses,manajemen berkas,manajemen perangkat dan komunikasi
 3. Mengapa system call tidak bisa di panggil langsung oleh user program?
    **Jawaban:**  karena program pengguna berjalan di "user mode",sementara system call hanya bisa dijalankan di "kernel mode" yang lebih ori aman memiliki hak akses istimewa untuk beinteraksi langsung dengan perangkat keras dan memp
