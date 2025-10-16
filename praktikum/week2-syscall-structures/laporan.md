@@ -85,12 +85,12 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 ---
 
 ## Quiz
-1. [Pertanyaan 1]  
-   **Jawaban:**  
-2. [Pertanyaan 2]  
-   **Jawaban:**  
-3. [Pertanyaan 3]  
-   **Jawaban:**  
+1. Apa fungsi utama system call dalam sistem operasi? 
+   **Jawaban:**  fungsi utaman system call adalah sebagai antarmuka atau jembatan bagi program aplikasi untuk meminta pelayanan sistem operasi(OS)
+2. Sebutkan 4 kategori system call yang umum di gunkanan?
+   **Jawaban:**  kategori system call yang umum digunakan adalah manajemen proses,manajemen berkas,manajemen perangkat dan komunikasi
+3. Mengapa system call tidak bisa di panggil langsung oleh user program?
+   **Jawaban:**  karena program pengguna berjalan di "user mode",sementara system call hanya bisa dijalankan di "kernel mode" yang lebih ori aman memiliki hak akses istimewa untuk beinteraksi langsung dengan perangkat keras dan memp
 
 ---
 
