@@ -116,6 +116,11 @@ Tuliskan 2–3 poin kesimpulan dari praktikum system call
 
 ---
 
+## Tugas
+
+
+
+
 ## Quiz
 1. Apa fungsi utama system call dalam sistem operasi? 
    **Jawaban:**  fungsi utaman system call adalah sebagai antarmuka atau jembatan bagi program aplikasi untuk meminta pelayanan sistem operasi(OS)
