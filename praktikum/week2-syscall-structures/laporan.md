@@ -1,5 +1,5 @@
 
-# Laporan Praktikum Minggu [X]
+# Laporan Praktikum Minggu 2 
 Topik: system call
 
 ---
@@ -41,6 +41,9 @@ Contoh
 
 ## Dasar Teori
 Tuliskan ringkasan teori (3–5 poin) yang mendasari system call: 
+- Antarmuka antara program pengguna dan kernel sistem operasi (OS): System call adalah mekanisme terprogram yang memungkinkan aplikasi pengguna untuk meminta layanan dari kernel sistem operasi, yang mengelola dan mengendalikan sumber daya sistem.
+- Perpindahan mode operasi: Ketika sebuah program memanggil system call, terjadi perubahan mode dari user mode (mode pengguna) ke kernel mode (mode kernel). Dalam user mode, program memiliki hak akses terbatas, sedangkan kernel mode memberikan hak istimewa untuk mengakses sumber daya sistem yang sensitif.
+- Akses terkendali ke sumber daya: OS menggunakan system call sebagai satu-satunya titik masuk yang terkontrol untuk mengakses sumber daya perangkat keras dan kernel. Hal ini memastikan program pengguna tidak dapat merusak sistem atau mengakses sumber daya yang tidak seharusnya diakses secara langsung.
 
 ---
 
@@ -63,15 +66,16 @@ dmesg | head
 ---
 
 ## Hasil Eksekusi
-Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/example.png)
+Sertakan screenshot hasil system call:
+
 
 ---
 
 ## Analisis
-- Jelaskan makna hasil percobaan.  
-- Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).  
-- Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
+- Analisis bagaimana file dibuka, dibaca, dan ditutup oleh kernel?
+- Amati log kernel yang muncul. Apa bedanya output ini dengan output dari program biasa?
+> jawab :
+
 
 ---
 
