@@ -149,9 +149,25 @@ dmesg
 
 3. Tulis analisis 400–500 kata tentang:
 - Mengapa system call penting untuk keamanan OS?
+
+Mengapa system call penting untuk keamanan OS?
+berfungsi sebagai penjaga pintu yang mengontrol akses aplikasi ke sumber daya system. OS menggunakan system call untuk memvalidasi izin dan memastikan hanya proses yang sah yang dapat melakukan operasi sensitif, seperti mengakses memori atau membaca file, sehingga mencegah program jahat merusak sistem atau mengganggu proses lain.system callmenajaga keamanan dengan cara Kontrol akses dan otorisasi ,Isolasi antar-proses,Validasi parameter,Pemisahan hak istimewa (privilege separation),Menjaga integritas system
+
 - Bagaimana OS memastikan transisi user–kernel berjalan aman?
+
+OS memastikan transisi user–kernel berjalan aman dengan menjaga stabilitas antarmuka modul kernel (Kernel Module Interface/KMI) dan menggunakan proses build hermetis yang konsisten. Dalam konteks Android, kernel dan modul vendor dibangun secara terpisah namun harus berfungsi seolah dibangun bersama, dengan hanya simbol KMI yang dikenal dan dibatasi agar dapat dipakai oleh modul vendor. Proses build hermetis menetapkan lingkungan build yang terkontrol dan menjamin konsistensi ABI (Application Binary Interface) sehingga mencegah modul yang tidak kompatibel dimuat, yang bisa mengancam keamanan transisi user-kernel. Semua ini memastikan bahwa kode yang dieksekusi saat pindah dari mode user ke kernel dapat dipercaya, mencegah kerusakan keamanan atau sistem akibat kode tidak sah atau rusak. Pendekatan ini meliputi pembekuan cabang KMI agar perubahan tidak merusak stabilitas, pengawasan simbol yang dipakai, dan menggunakan lingkungan build yang sepenuhnya dijelaskan untuk reproduksibilitas hasil build
+
 - Sebutkan contoh system call yang sering digunakan di Linux.
 
+3. Contoh system call yang sering digunakan di Linux adalah open, read, write, close, fork, exit, dan kill. Panggilan-panggilan ini memungkinkan program untuk berinteraksi dengan kernel sistem operasi untuk melakukan tugas-tugas seperti manajemen berkas, pembuatan proses baru, dan pengakhiran proses. 
+-	open: Membuka berkas atau perangkat, memungkinkan program untuk berinteraksi dengannya (misalnya, membaca atau menulis). 
+-	read: Membaca data dari berkas atau perangkat yang sudah dibuka. 
+-	write: Menulis data ke berkas atau perangkat yang sudah dibuka. 
+-	close: Menutup berkas atau perangkat setelah selesai digunakan untuk membebaskan sumber daya sistem. 
+-	fork: Membuat salinan dari proses yang sedang berjalan, yang dikenal sebagai proses anak. Proses induk melanjutkan eksekusi sementara proses anak dimulai. 
+-	exit: Mengakhiri eksekusi program atau utas saat ini dan memulihkan sumber daya yang digunakan. 
+-	kill: Mengirim sinyal ke proses lain, seringkali untuk menghentikannya atau memerintahkannya melakukan tindakan tertentu. 
+-	exec: Mengganti citra proses saat ini dengan program baru. Ini sering digunakan bersama dengan fork untuk menjalankan program yang berbeda dalam proses ana
 
 
 
