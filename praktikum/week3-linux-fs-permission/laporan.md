@@ -123,6 +123,10 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 3. Analisis peran chmod dan chown dalam keamanan sistem Linux.
 4. Upload hasil dan laporan ke repositori Git sebelum deadline.
 
+**JAWAB**
+
+
+
 
 ## Quiz
 1. Apa fungsi dari perintah chmod?
