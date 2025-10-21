@@ -1,20 +1,19 @@
 
-# Laporan Praktikum Minggu [X]
-Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
-
+# Laporan Praktikum Minggu III
+Topik: linux fs permision
 ---
 
 ## Identitas
-- **Nama**  : [Nama Mahasiswa]  
-- **NIM**   : [NIM Mahasiswa]  
-- **Kelas** : [Kelas]
+- **Nama**  : Faik Setyawan
+- **NIM**   : 2502020936  
+- **Kelas** : 1IKRA
 
 ---
 
 ## Tujuan
 Tuliskan tujuan praktikum minggu ini.  
 Contoh:  
-> Mahasiswa mampu menjelaskan fungsi utama sistem operasi dan peran kernel serta system call.
+
 
 ---
 
@@ -43,14 +42,12 @@ dmesg | head
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/example.png)
+
 
 ---
 
 ## Analisis
-- Jelaskan makna hasil percobaan.  
-- Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).  
-- Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
+
 
 ---
 
@@ -59,13 +56,24 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 
 ---
 
+## Tugas 
+1. Dokumentasikan hasil seluruh perintah pada tabel observasi di laporan.md.
+2. Jelaskan fungsi tiap perintah dan arti kolom permission (rwxr-xr--).
+3. Analisis peran chmod dan chown dalam keamanan sistem Linux.
+4. Upload hasil dan laporan ke repositori Git sebelum deadline.
+
+
 ## Quiz
-1. [Pertanyaan 1]  
-   **Jawaban:**  
-2. [Pertanyaan 2]  
-   **Jawaban:**  
-3. [Pertanyaan 3]  
-   **Jawaban:**  
+1. Apa fungsi dari perintah chmod?
+   **Jawaban:**  chmod digunakan untuk menentukan siapa yang bisa:membaca file (read / r),menulis atau mengubah file (write / w)dan menjalankan file (execute / x)
+   
+2. Apa arti dari kode permission rwxr-xr--?
+   **Jawaban:**  Kode rwxr-xr-- adalah bentuk permission (izin akses) pada file atau direktori di sistem Linux (termasuk WSL).
+   
+3. Jelaskan perbedaan antara chown dan chmod?
+   **Jawaban:**
+- chmod (change mode) → mengubah izin akses file (baca, tulis, eksekusi).
+- chown (change owner) → mengubah pemilik atau grup file.
 
 ---
 
