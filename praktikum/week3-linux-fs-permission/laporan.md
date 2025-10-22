@@ -124,6 +124,10 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 4. Upload hasil dan laporan ke repositori Git sebelum deadline.
 
 **JAWAB**
+
+1. 
+
+
 | No | Perintah                                         | Hasil / Output                                                                                                                                                                                                     | Keterangan                                                                                     |
 | -- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
 | 1  | `pwd`                                            | `/home/faik`                                                                                                                                                                                                       | Direktori aktif saat ini adalah `/home/faik`.                                                  |
@@ -138,9 +142,15 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 | 10 | `sudo chown root percobaan.txt`                  | `[sudo] password for faik:`                                                                                                                                                                                        | Mengubah **pemilik file menjadi root**.                                                        |
 | 11 | `ls -l percobaan.txt`                            | `-rw------- 1 root faik 24 Oct 21 17:32 percobaan.txt`                                                                                                                                                             | File sekarang **dimiliki root**, hanya root yang bisa baca/tulis karena permission `600`.      |
 
+2.
+- Owner	rwx	Bisa membaca, mengedit, dan menjalankan file
+- Group	r-x	Bisa membaca & menjalankan, tapi tidak bisa mengedit
+- Others	r--	Hanya bisa membaca file, tidak bisa mengubah atau menjalankan
+- Jadi, rwxr-xr-- artinya Pemilik bisa baca, tulis, eksekusi, grup bisa baca & eksekusi, dan pengguna lain hanya bisa baca
 
+3. chmod mengatur izin akses file atau direktori, menentukan siapa yang bisa membaca, menulis, atau mengeksekusi. Dengan chmod, file sensitif bisa dilindungi dari akses atau modifikasi oleh user yang tidak berwenang dan chown mengatur kepemilikan (user & group) file atau direktori. Dengan chown, hanya pemilik atau root yang bisa mengubah file, sehingga mencegah akses tidak sah dan menjaga tanggung jawab file.
 
-
+   
 ## Quiz
 1. Apa fungsi dari perintah chmod?
    **Jawaban:**  chmod digunakan untuk menentukan siapa yang bisa:membaca file (read / r),menulis atau mengubah file (write / w)dan menjalankan file (execute / x)
