@@ -190,8 +190,9 @@ Permission di Linux berfungsi sebagai mekanisme kontrol akses yang membatasi tin
 
 ## Refleksi Diri
 Tuliskan secara singkat:
-- Apa bagian yang paling menantang minggu ini?  
-- Bagaimana cara Anda mengatasinya?  
+- Apa bagian yang paling menantang minggu ini?  laptop kurang mendukung dalam pengerjaan tugas week 3
+- Bagaimana cara Anda mengatasinya? meminjam laptop teman 
+    
 
 ---
 
