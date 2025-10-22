@@ -135,7 +135,8 @@ struktur baris:
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+
+Permission di Linux berfungsi sebagai mekanisme kontrol akses yang membatasi tindakan pengguna terhadap file dan direktori. Dengan pengaturan owner, group, dan others serta hak akses read, write, sistem dapat menjaga keamanan, mencegah perubahan tidak sah, dan memastikan integritas data. Perintah seperti chmod dan chown memudahkan administrator untuk mengelola hak akses secara fleksibel.
 
 ---
 
