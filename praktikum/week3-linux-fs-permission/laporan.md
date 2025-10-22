@@ -11,14 +11,36 @@ Topik: linux fs permision
 ---
 
 ## Tujuan
-Tuliskan tujuan praktikum minggu ini.  
-Contoh:  
+
+Setelah menyelesaikan tugas ini, mahasiswa mampu:
+
+Menggunakan perintah ls, pwd, cd, cat untuk navigasi file dan direktori.
+Menggunakan chmod dan chown untuk manajemen hak akses file.
+Menjelaskan hasil output dari perintah Linux dasar.
+Menyusun laporan praktikum dengan struktur yang benar.
+Mengunggah dokumentasi hasil ke Git Repository tepat waktu.
 
 
 ---
 
 ## Dasar Teori
-Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
+
+1. Tipe pengguna Setiap file atau direktori memiliki tiga jenis pengguna: owner (pemilik), group (grup), dan others (lainnya). Hak akses dapat berbeda untuk tiap kategori.
+
+2. Tiga hak akses dasar:
+   
+- r (read) → baca isi file / list isi direktori
+- w (write) → ubah isi file / tambah hapus file di direktori
+
+3. Representasi permission:
+   
+- Secara simbolik: rwxr-xr-- (owner, group, others)
+- Secara numerik (octal): 7=rwx, 6=rw-, 5=r-x, 4=r--, dst.
+
+4. Perintah utama:
+   
+- chmod → ubah permission file/direktori
+- chown → ubah pemilik dan/atau grup file
 
 ---
 
