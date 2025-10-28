@@ -1,7 +1,6 @@
 
 # Laporan Praktikum Minggu IV
-Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
-
+Topik: Proses user
 ---
 
 ## Identitas
