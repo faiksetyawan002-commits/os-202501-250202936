@@ -119,7 +119,7 @@ Setiap user dan prosesnya diisolasi untuk mencegah gangguan atau penyalahgunaan 
 ---
 
 ## Analisis
-2. eksperimen 2: Jelaskan setiap output dan fungsinya
+2. eksperimen 2: Jelaskan setiap output dan fungsinya (whoami, id, groups)
 3. eksperimen 3: Jelaskan kolom penting seperti PID, USER, %CPU, %MEM, COMMAND
 4. eksperimen 4: Catat PID proses sleep
 5. eksperimen 5: Amati hierarki proses dan identifikasi proses induk (init/systemd)
@@ -136,7 +136,8 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 ### Tugas
 1. Dokumentasikan hasil semua perintah dan jelaskan fungsi tiap perintah.  
 2. Gambarkan hierarki proses dalam bentuk diagram pohon (`pstree`) di laporan.  
-3. Jelaskan hubungan antara user management dan keamanan sistem Linux.  
+3. Jelaskan hubungan antara user management dan keamanan sistem Linux.
+  - User management berfungsi sebagai lapisan pengendali akses dan perlindungan data, yang secara langsung berkontribusi pada keamanan sistem Linux dengan memastikan bahwa hanya pengguna yang berwenang dapat melakukan tindakan tertentu di dalam sistem.
 4. Upload laporan ke repositori Git tepat waktu.
 
 ## Quiz
