@@ -124,13 +124,39 @@ Setiap user dan prosesnya diisolasi untuk mencegah gangguan atau penyalahgunaan 
 4. eksperimen 4: Catat PID proses sleep
 5. eksperimen 5: Amati hierarki proses dan identifikasi proses induk (init/systemd)
 
- 
+**jawaban**
+
+2. `whoami`
+- Fungsi:
+Menampilkan nama user yang sedang aktif (login) di sistem saat ini.
+Perintah ini sering digunakan untuk memastikan identitas user yang sedang menjalankan shell atau perintah.
+- Contoh output:faik
+- Penjelasan output:
+Menunjukkan bahwa user yang sedang aktif atau menjalankan terminal adalah faik.
+
+`id`
+
+Fungsi:Menampilkan informasi identitas lengkap dari user, termasuk:
+- UID (User ID)
+- GID (Group ID)
+- Kelompok tambahan (groups)
+
+- Contoh output:uid=1000(faik) gid=1000(faik) groups=1000(faik),27(sudo)
+
+- Penjelasan output:
+   - uid=1000(faik) : ID unik user bernama faik adalah 1000.
+   - gid=1000(faik) : ID grup utama user faik adalah 1000.
+   - groups=1000(faik),27(sudo) : User faik termasuk dalam dua grup: faik dan sudo (berarti punya hak administratif).
+
+`groups`
+- Fungsi:Menampilkan daftar grup yang diikuti oleh user saat ini.
+- Contoh output:faik sudo
+- Penjelasan output:User faik adalah anggota dari dua grup: faik (grup utama) dan sudo (grup dengan hak akses administratif).
+
 ---
 
 ## Kesimpulan
 - Proses user merupakan proses yang dijalankan oleh pengguna di ruang pengguna (user space) dan berinteraksi dengan kernel melalui system call untuk menggunakan sumber daya sistem.
-
-
 - Proses ini memastikan sistem dapat menjalankan banyak program secara terpisah, sehingga meningkatkan keamanan, stabilitas, dan efisiensi sistem operasi.
 
 
@@ -140,7 +166,11 @@ Setiap user dan prosesnya diisolasi untuk mencegah gangguan atau penyalahgunaan 
 ## D. Tugas & Quiz
 ### Tugas
 1. Dokumentasikan hasil semua perintah dan jelaskan fungsi tiap perintah.  
-2. Gambarkan hierarki proses dalam bentuk diagram pohon (`pstree`) di laporan.  
+2. Gambarkan hierarki proses dalam bentuk diagram pohon (`pstree`) di laporan.
+
+<img width="2082" height="882" alt="Untitled diagram-2025-10-28-115837" src="https://github.com/user-attachments/assets/1bd79a88-85c1-4416-a7b6-d96fce5ba810" />
+
+ 
 3. Jelaskan hubungan antara user management dan keamanan sistem Linux.
   - User management berfungsi sebagai lapisan pengendali akses dan perlindungan data, yang secara langsung berkontribusi pada keamanan sistem Linux dengan memastikan bahwa hanya pengguna yang berwenang dapat melakukan tindakan tertentu di dalam sistem.
 4. Upload laporan ke repositori Git tepat waktu.
