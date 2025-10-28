@@ -128,7 +128,12 @@ Setiap user dan prosesnya diisolasi untuk mencegah gangguan atau penyalahgunaan 
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+- Proses user merupakan proses yang dijalankan oleh pengguna di ruang pengguna (user space) dan berinteraksi dengan kernel melalui system call untuk menggunakan sumber daya sistem.
+
+
+- Proses ini memastikan sistem dapat menjalankan banyak program secara terpisah, sehingga meningkatkan keamanan, stabilitas, dan efisiensi sistem operasi.
+
+
 
 ---
 
