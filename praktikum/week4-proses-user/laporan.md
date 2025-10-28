@@ -1,25 +1,29 @@
 
-# Laporan Praktikum Minggu [X]
+# Laporan Praktikum Minggu IV
 Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
 
 ---
 
 ## Identitas
-- **Nama**  : [Nama Mahasiswa]  
-- **NIM**   : [NIM Mahasiswa]  
-- **Kelas** : [Kelas]
+- **Nama**  : Faik Setyawan
+- **NIM**   : 250202936  
+- **Kelas** : 1IKRA
 
 ---
 
 ## Tujuan
-Tuliskan tujuan praktikum minggu ini.  
-Contoh:  
-> Mahasiswa mampu menjelaskan fungsi utama sistem operasi dan peran kernel serta system call.
+Setelah menyelesaikan tugas ini, mahasiswa mampu:
+
+1. Menjelaskan konsep proses dan user dalam sistem operasi Linux.
+2. Menampilkan daftar proses yang sedang berjalan dan statusnya.
+3. Menggunakan perintah untuk membuat dan mengelola user.
+4. Menghentikan atau mengontrol proses tertentu menggunakan PID.
+5. Menjelaskan kaitan antara manajemen user dan keamanan sistem.
 
 ---
 
 ## Dasar Teori
-Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
+Tuliskan ringkasan teori (3–5 poin) yang mendasariProses User
 
 ---
 
@@ -42,8 +46,7 @@ dmesg | head
 ---
 
 ## Hasil Eksekusi
-Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/example.png)
+
 
 ---
 
@@ -59,14 +62,18 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 
 ---
 
-## Quiz
-1. [Pertanyaan 1]  
-   **Jawaban:**  
-2. [Pertanyaan 2]  
-   **Jawaban:**  
-3. [Pertanyaan 3]  
-   **Jawaban:**  
+## D. Tugas & Quiz
+### Tugas
+1. Dokumentasikan hasil semua perintah dan jelaskan fungsi tiap perintah.  
+2. Gambarkan hierarki proses dalam bentuk diagram pohon (`pstree`) di laporan.  
+3. Jelaskan hubungan antara user management dan keamanan sistem Linux.  
+4. Upload laporan ke repositori Git tepat waktu.
 
+## Quiz
+Tuliskan jawaban di bagian **Quiz** pada laporan:
+1. Apa fungsi dari proses `init` atau `systemd` dalam sistem Linux?  
+2. Apa perbedaan antara `kill` dan `killall`?  
+3. Mengapa user `root` memiliki hak istimewa di sistem Linux?
 ---
 
 ## Refleksi Diri
