@@ -119,10 +119,12 @@ Setiap user dan prosesnya diisolasi untuk mencegah gangguan atau penyalahgunaan 
 ---
 
 ## Analisis
-- Jelaskan makna hasil percobaan.  
-- Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).  
-- Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
+2. eksperimen 2: Jelaskan setiap output dan fungsinya
+3. eksperimen 3: Jelaskan kolom penting seperti PID, USER, %CPU, %MEM, COMMAND
+4. eksperimen 4: Catat PID proses sleep
+5. eksperimen 5: Amati hierarki proses dan identifikasi proses induk (init/systemd)
 
+ 
 ---
 
 ## Kesimpulan
