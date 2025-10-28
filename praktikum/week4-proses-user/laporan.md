@@ -23,7 +23,20 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 ---
 
 ## Dasar Teori
-Tuliskan ringkasan teori (3–5 poin) yang mendasariProses User
+- Konsep User (Pengguna):
+User adalah individu atau entitas yang berinteraksi dengan sistem komputer untuk menjalankan perintah, mengakses data, dan menggunakan sumber daya sistem.
+
+- Identitas dan Autentikasi:
+Setiap user memiliki identitas unik (username) dan kredensial (password atau token) untuk memastikan keamanan serta mencegah akses tidak sah ke sistem.
+
+- Hak Akses dan Otorisasi:
+Sistem memberikan hak akses tertentu (read, write, execute) kepada user sesuai perannya. Ini diatur melalui permission atau access control list.
+
+- Manajemen Proses User:
+Saat user menjalankan program, sistem membuat process atas nama user tersebut. Proses ini membawa identitas dan hak akses user untuk mengontrol apa yang dapat dilakukan di sistem.
+
+- Isolasi dan Keamanan:
+Setiap user dan prosesnya diisolasi untuk mencegah gangguan atau penyalahgunaan antar pengguna, mendukung stabilitas dan keamanan sist
 
 ---
 
