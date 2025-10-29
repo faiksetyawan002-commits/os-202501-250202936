@@ -153,16 +153,34 @@ Fungsi:Menampilkan informasi identitas lengkap dari user, termasuk:
 - Contoh output:faik sudo
 - Penjelasan output:User faik adalah anggota dari dua grup: faik (grup utama) dan sudo (grup dengan hak akses administratif).
 
----
+3. - PID (Process ID)
+Artinya: Nomor unik yang diberikan oleh sistem untuk setiap proses yang sedang berjalan. Fungsinya Digunakan untuk mengidentifikasi dan mengontrol proses, misalnya ketika ingin menghentikan proses menggunakan kill PID.
+
+- USER
+Artinya: Nama pengguna (user) yang menjalankan proses tersebut.Fungsi nya Menunjukkan siapa pemilik proses, berguna untuk manajemen keamanan dan hak akses.
+
+- %CPU
+Artinya: Persentase penggunaan CPU oleh proses tersebut. Fungsi nya Menunjukkan seberapa besar beban prosesor yang digunakan proses itu, nilai tinggi berarti proses tersebut menggunakan banyak daya komputasi.
+
+- %MEM
+Artinya: Persentase penggunaan memori (RAM) oleh proses tersebut. Fungsi nya Memantau seberapa besar memori yang dikonsumsi, berguna untuk mengidentifikasi proses yang boros memori.
+
+- COMMAND
+
+Artinya: Nama atau perintah yang menjalankan proses. Fungsi nya menunjukkan program atau skrip apa yang sedang berjalan biasanya mencantumkan path atau argumen lengkap dari perintah tersebut.
+
+
+4. - Analisis Hierarki:
+Ini adalah proses pertama yang dijalankan oleh kernel saat sistem booting.
+Fungsi systemd: Menginisialisasi seluruh sistem (mengganti peran lama init pada sistem modern).Menjalankan semua proses anak (child processes) seperti NetworkManager, sshd, cron, dan Mengatur lifecycle (start, stop, restart) layanan sistem.
+
 
 ## Kesimpulan
 - Proses user merupakan proses yang dijalankan oleh pengguna di ruang pengguna (user space) dan berinteraksi dengan kernel melalui system call untuk menggunakan sumber daya sistem.
 - Proses ini memastikan sistem dapat menjalankan banyak program secara terpisah, sehingga meningkatkan keamanan, stabilitas, dan efisiensi sistem operasi.
 
 
-
 ---
-
 ## D. Tugas & Quiz
 ### Tugas
 1. Dokumentasikan hasil semua perintah dan jelaskan fungsi tiap perintah.  
