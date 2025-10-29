@@ -115,6 +115,12 @@ Setiap user dan prosesnya diisolasi untuk mencegah gangguan atau penyalahgunaan 
 
 ## Hasil Eksekusi
 
+<img width="1365" height="768" alt="proses user 1" src="https://github.com/user-attachments/assets/460e6dd1-607a-44c4-8344-6fdb75cbea4b" />
+
+<img width="1365" height="767" alt="proses user 2" src="https://github.com/user-attachments/assets/98cf7dea-128d-4943-843f-702b1e5d32ae" />
+
+<img width="1366" height="768" alt="proses user 3" src="https://github.com/user-attachments/assets/a7241b3e-de3e-4033-ac02-a97fb1ad11d3" />
+
 
 ---
 
