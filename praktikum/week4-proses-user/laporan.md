@@ -159,7 +159,11 @@ Fungsi:Menampilkan informasi identitas lengkap dari user, termasuk:
 - Contoh output:faik sudo
 - Penjelasan output:User faik adalah anggota dari dua grup: faik (grup utama) dan sudo (grup dengan hak akses administratif).
 
-3. - PID (Process ID)
+3. faik         432  0.0  0.0   3212  1792 pts/0    S    18:01   0:00 sleep 1000
+faik         434  0.0  0.1   4028  2176 pts/0    S+   18:01   0:00 grep --color=auto sleep
+
+
+4. - PID (Process ID)
 Artinya: Nomor unik yang diberikan oleh sistem untuk setiap proses yang sedang berjalan. Fungsinya Digunakan untuk mengidentifikasi dan mengontrol proses, misalnya ketika ingin menghentikan proses menggunakan kill PID.
 
 - USER
