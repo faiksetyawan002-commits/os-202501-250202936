@@ -189,7 +189,10 @@ Fungsi systemd: Menginisialisasi seluruh sistem (mengganti peran lama init pada 
 ---
 ## D. Tugas & Quiz
 ### Tugas
-1. Dokumentasikan hasil semua perintah dan jelaskan fungsi tiap perintah.  
+1. Dokumentasikan hasil semua perintah dan jelaskan fungsi tiap perintah.
+
+Perintah `whoami` digunakan untuk mengetahui user yang sedang aktif pada sistem, sedangkan `id` dan `groups` memberikan informasi lebih detail mengenai identitas pengguna, termasuk UID, GID, serta keanggotaan grup yang menentukan hak aksesnya. Perintah `sudo adduser praktikan` berfungsi untuk menambahkan user baru bernama praktikan, dan `sudo passwd praktikan` digunakan untuk mengatur kata sandinya agar akun tersebut dapat digunakan untuk login. Selanjutnya, `ps aux | head -10` menampilkan daftar proses yang sedang berjalan di sistem secara ringkas, dan `top -n 1` memberikan gambaran penggunaan sumber daya seperti CPU dan memori secara real-time. Perintah `sleep 1000` & digunakan untuk menjalankan proses sleep di latar belakang, sementara `ps aux | grep sleep` berguna untuk mencari dan memastikan proses tersebut sedang aktif dengan menampilkan PID-nya. Jika proses tersebut ingin dihentikan, maka digunakan perintah `kill <PID>`, yang mengakhiri proses berdasarkan nomor PID yang ditentukan. Terakhir, `pstree -p | head -20` menampilkan struktur hierarki proses, sehingga dapat diketahui proses induk seperti systemd beserta proses turunannya. Secara keseluruhan, rangkaian perintah ini menunjukkan bagaimana administrator sistem dapat mengelola user dan memantau proses yang berjalan dalam sistem Linux secara efisien.
+   
 2. Gambarkan hierarki proses dalam bentuk diagram pohon (`pstree`) di laporan.
 
 <img width="2082" height="882" alt="Untitled diagram-2025-10-28-115837" src="https://github.com/user-attachments/assets/1bd79a88-85c1-4416-a7b6-d96fce5ba810" />
