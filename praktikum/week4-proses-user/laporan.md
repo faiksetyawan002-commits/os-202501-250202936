@@ -230,8 +230,8 @@ Dapat memulai, menghentikan, me-restart, dan memantau status service.
 
 ## Refleksi Diri
 Tuliskan secara singkat:
-- Apa bagian yang paling menantang minggu ini?  
-- Bagaimana cara Anda mengatasinya?  
+- Apa bagian yang paling menantang minggu ini?  laptop yang kurang mendukung dalam mengerjakan week 4
+- Bagaimana cara Anda mengatasinya?  meminjam laptop teman 
 
 ---
 
