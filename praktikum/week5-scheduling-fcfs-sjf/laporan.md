@@ -91,15 +91,49 @@ Menyeimbangkan antara efisiensi CPU, respons cepat, dan keadilan antar proses, t
      0    6    14   21   24
      ```
 
+| Proses | Burst Time | Arrival Time | Star Time | Finis Time |WT | TAT|
+   |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+   | P1 | 6 | 0 | 0 | 6 | 0 | 6 |
+   | P2 | 8 | 1 | 6 | 14 | 5 | 13 |
+   | P3 | 7 | 2 | 14 | 21 | 12 | 19 |
+   | P4 | 3 | 3 | 21 | 24 | 18 | 21 |
+
+   rata-rata Waiting Time (WT) = 8,75
+
+   rata-rata Turnaround Time (TAT) = 14,75
+
+   Gantt Chart:
+
+    | P1 | P2 | P3 | P4 |
+     0    6    14   21   24
+
 3. **Eksperimen 2 – SJF (Shortest Job First)**
    - Urutkan proses berdasarkan *Burst Time* terpendek (dengan memperhatikan waktu kedatangan).  
    - Lakukan perhitungan WT dan TAT seperti langkah sebelumnya.  
+
+| Proses | Burst Time | Arrival Time | Star Time | Finis Time |WT | TAT|
+   |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+   | P4 | 3 | 3 | 3 | 6 | 0 | 3 |
+   | P1 | 6 | 0 | 6  | 12  | 6  |  12 |
+   | P3 | 7 | 2 | 12 | 19 | 10 | 17 |
+   | P2 | 8 | 1 | 19  | 27 | 18  | 26 |
+   
+   rata-rata Waiting Time (WT) = 8,5
+   rata-rata Turnaround Time (TAT) = 14,5
+
+Gantt Chart:
+
+    | P1 | P2 | P3 | P4 |
+     0    6    12   19   27
+
    - Bandingkan hasil FCFS dan SJF pada tabel berikut:
 
      | Algoritma | Avg Waiting Time | Avg Turnaround Time | Kelebihan | Kekurangan |
      |------------|------------------|----------------------|------------|-------------|
-     | FCFS | ... | ... | Sederhana dan mudah diterapkan | Tidak efisien untuk proses panjang |
-     | SJF | ... | ... | Optimal untuk job pendek | Menyebabkan *starvation* pada job panjang |
+     | FCFS | 8,75 | 14,75 | Sederhana dan mudah diterapkan | Tidak efisien untuk proses panjang |
+     | SJF | 8,5 | 14,5 | Optimal untuk job pendek | Menyebabkan *starvation* pada job panjang |
+
+
 
 4. **Eksperimen 3 – Visualisasi Spreadsheet (Opsional)**
    - Gunakan Excel/Google Sheets untuk membuat perhitungan otomatis:
@@ -113,7 +147,7 @@ Menyeimbangkan antara efisiensi CPU, respons cepat, dan keadilan antar proses, t
 5. **Analisis**
    - Bandingkan hasil rata-rata WT dan TAT antara FCFS & SJF.  
    - Jelaskan kondisi kapan SJF lebih unggul dari FCFS dan sebaliknya.  
-   - Tambahkan kesimpulan singkat di akhir laporan.
+   - Tambahkan kesimpulan singkat di akhir laporan. 
 
 6. **Commit & Push**
    ```bash
@@ -121,6 +155,7 @@ Menyeimbangkan antara efisiensi CPU, respons cepat, dan keadilan antar proses, t
    git commit -m "Minggu 5 - CPU Scheduling FCFS & SJF"
    git push origin main
    ```
+
 ---
 
 ## Hasil Eksekusi
@@ -136,7 +171,10 @@ Menyeimbangkan antara efisiensi CPU, respons cepat, dan keadilan antar proses, t
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+- FCFS (First Come First Served) menjalankan proses berdasarkan urutan kedatangan — proses yang datang lebih dulu akan dijalankan lebih dulu. Metode ini sederhana namun dapat menyebabkan waktu tunggu tinggi bagi proses yang datang belakangan (efek convoy).
+
+- SJF (Shortest Job First) memprioritaskan proses dengan waktu eksekusi terpendek, sehingga menghasilkan rata-rata waktu tunggu paling kecil dibanding FCFS.
+
 
 ---
 
@@ -146,6 +184,42 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 2. Sajikan hasil perhitungan dalam tabel perbandingan (FCFS vs SJF).  
 3. Analisis kelebihan dan kelemahan tiap algoritma.  
 4. Simpan seluruh hasil dan analisis ke `laporan.md`.  
+
+**JAWABAN**
+
+1. 
+2. jawaban ada di tabel eksperimen 2
+3. 
+   
+(1.) FCFS (First Come First Served)
+
+Kelebihan:
+
+- Sederhana dan mudah diimplementasikan.
+- Adil dalam urutan kedatangan (tidak ada proses yang dilewati).
+- Cocok untuk sistem batch (pekerjaan datang berurutan).
+
+Kelemahan:
+
+- Dapat menyebabkan waktu tunggu lama untuk proses pendek yang datang setelah proses panjang (convoy effect).
+- Tidak efisien untuk sistem interaktif.
+- Tidak mempertimbangkan prioritas atau waktu eksekusi proses.
+ 
+ (2.) SJF (Shortest Job First)
+
+Kelebihan:
+
+- Memberikan rata-rata waktu tunggu dan waktu tinggal paling rendah.
+- Efisien untuk sistem dengan banyak proses pendek.
+- Mengoptimalkan pemanfaatan CPU.
+
+Kelemahan:
+
+- Sulit diterapkan karena lama burst time harus diketahui terlebih dahulu.
+- Dapat menyebabkan starvation untuk proses yang panjang.
+- Tidak cocok untuk sistem waktu nyata (real-time) yang memerlukan respon cepat untuk semua proses.
+
+
 
 ### Quiz
 Tuliskan jawaban di bagian **Quiz** pada laporan:
