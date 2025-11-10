@@ -168,6 +168,47 @@ Gantt Chart:
 - Jelaskan kondisi kapan SJF lebih unggul dari FCFS dan sebaliknya.  
 - Tambahkan kesimpulan singkat di akhir laporan. 
 
+**JAWABAN**
+
+RATA RATA  FCFS 
+- rata-rata Waiting Time (WT) = 8,75
+- rata-rata Turnaround Time (TAT) = 14,75
+
+RATA RATA FJS
+- rata-rata Waiting Time (WT) = 8,5
+- rata-rata Turnaround Time (TAT) = 14,5
+
+
+SJF lebih unggul dari FCFS ketika:
+
+- Waktu eksekusi (burst time) setiap proses sudah diketahui atau dapat diperkirakan dengan baik.
+Karena SJF memilih proses dengan waktu terpendek, algoritma ini dapat meminimalkan waktu tunggu rata-rata dan meningkatkan efisiensi CPU.
+
+- Proses-proses yang datang memiliki variasi burst time yang besar.
+Dalam kondisi ini, SJF mampu menyelesaikan proses-proses kecil dengan cepat, sehingga total waktu tunggu keseluruhan menjadi jauh lebih kecil dibanding FCFS.
+
+- Lingkungan sistem bersifat batch (non-interaktif).
+Pada sistem batch, semua proses sudah diketahui di awal, sehingga mudah menentukan urutan yang paling efisien dengan SJF.
+
+
+FCFS lebih unggul dari SJF ketika:
+
+- Waktu kedatangan proses tidak dapat diprediksi dan burst time sulit diketahui.
+FCFS tidak memerlukan perkiraan waktu eksekusi, jadi lebih sederhana dan mudah diterapkan dalam kondisi nyata.
+
+- Lingkungan sistem bersifat interaktif atau multitasking.
+Dalam sistem seperti ini, FCFS lebih adil karena setiap proses dilayani berdasarkan urutan datangnya, tanpa menunda proses panjang terlalu lama.
+
+- Tujuan utama adalah keadilan, bukan efisiensi.
+FCFS memastikan semua proses mendapat giliran secara berurutan, sehingga tidak terjadi starvation seperti pada SJF.
+
+
+
+
+
+
+
+
 ---
 
 ## Kesimpulan
@@ -188,7 +229,13 @@ Gantt Chart:
 **JAWABAN**
 
 1. 
-2. jawaban ada di tabel eksperimen 2
+![Screenshot hasil](<screenshots/FCFS dan SJF.png>)
+
+2.    
+ Algoritma | Avg Waiting Time | Avg Turnaround Time | Kelebihan | Kekurangan |
+|------------|------------------|----------------------|------------|-------------|
+| FCFS | 8,75 | 14,75 | Sederhana dan mudah diterapkan | Tidak efisien untuk proses panjang |
+| SJF | 8,5 | 14,5 | Optimal untuk job pendek | Menyebabkan *starvation* pada job panjang |
 3. 
    
 (1.) FCFS (First Come First Served)
