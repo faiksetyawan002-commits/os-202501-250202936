@@ -1,5 +1,3 @@
-
-
 # Laporan Praktikum Minggu VII
 Topik: Concurrency Deadlock
 
@@ -12,7 +10,7 @@ Topik: Concurrency Deadlock
 
 ---
 ## Pendahuluan
-Masalah Dining Philosophers adalah permasalahan sinkronisasi klasik dalam sistem operasi yang menggambarkan lima filsuf yang duduk melingkar di meja makan, masing-masing membutuhkan dua garpu untuk makan. Masalah muncul ketika semua filsuf mencoba mengambil garpu secara bersamaan sehingga dapat menyebabkan deadlock.
+Masalah Dining Philosophers adalah permasalahan sinkronisasi klasik dalam sistem operasi yang menggambarkan lima filsuf yang duduk melingkar di meja makan, masing-masing membutuhkan dua garpu untuk makan. Masalah muncul ketika semua filsuf mencoba mengambil garpu secara beramaan sehingga dapat menyebabkan deadlock.
 
 Pada laporan ini, kita mengimplementasikan versi sederhana dari Dining Philosophers tanpa mekanisme pencegahan deadlock. Tujuannya adalah untuk melihat bagaimana deadlock dapat terjadi dalam model ini.
 
@@ -477,3 +475,4 @@ Mempelajari kembali konsep semaphore dan strategi pencegahan deadlock seperti pe
 
 **Credit:**  
 _Template laporan praktikum Sistem Operasi (SO-202501) – Universitas Putra Bangsa_
+vv
