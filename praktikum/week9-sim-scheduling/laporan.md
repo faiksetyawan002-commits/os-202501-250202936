@@ -1,6 +1,6 @@
 
-# Laporan Praktikum Minggu [X]
-Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
+# Laporan Praktikum Minggu IX
+Topik: Simulasi Algoritma Penjadwalan CPU
 
 ---
 
@@ -89,20 +89,138 @@ Simulasi dilakukan untuk memahami cara kerja algoritma penjadwalan dan membandin
 ---
 
 ## Hasil Eksekusi
-Sertakan screenshot hasil percobaan atau diagram:
+screenshot hasil 
 ![Screenshot hasil](screenshots/example.png)
 
 ---
 
 ## Analisis
-   - Jelaskan alur program.  
+   - Jelaskan alur program. 
+
+   a. Inisialisasi Dataset
+
+```processes = ["P1", "P2", "P3", "P4"]
+arrival_time = [0, 1, 2, 3]
+burst_time = [6, 8, 7, 3]
+```
+
+processes → daftar proses
+
+arrival_time → waktu kedatangan tiap proses
+
+burst_time → lama eksekusi (CPU burst)
+
+Jumlah proses disimpan dalam variabel n.
+
+b. Inisialisasi Variabel Hasil
+```
+start_time = [0] * n
+finish_time = [0] * n
+waiting_time = [0] * n
+turnaround_time = [0] * n
+````
+
+Digunakan untuk menyimpan:
+
+start_time → waktu proses mulai dieksekusi
+
+finish_time → waktu proses selesai
+
+waiting_time → waktu tunggu
+
+turnaround_time → total waktu proses di sistem
+
+c. Proses Penjadwalan FCFS
+for i in range(n):
+
+
+Loop digunakan untuk memproses setiap proses secara berurutan sesuai urutan kedatangan.
+
+Proses pertama (P1)
+```
+start_time[i] = arrival_time[i]
+```
+
+Karena CPU masih kosong, proses langsung dieksekusi.
+
+Proses berikutnya
+```
+start_time[i] = max(finish_time[i - 1], arrival_time[i])
+```
+
+Proses hanya bisa mulai jika:
+
+CPU sudah selesai menjalankan proses sebelumnya
+
+Proses tersebut sudah datang
+
+d. Perhitungan Waktu
+```
+finish_time[i] = start_time[i] + burst_time[i]
+waiting_time[i] = start_time[i] - arrival_time[i]
+turnaround_time[i] = finish_time[i] - arrival_time[i]
+
+```
+Rumus:
+```
+Finish Time = Start Time + Burst Time
+
+Waiting Time = Start Time − Arrival Time
+
+Turnaround Time = Finish Time − Arrival Time
+```
+e. Perhitungan Rata-rata
+```
+avg_waiting_time = sum(waiting_time) / n
+avg_turnaround_time = sum(turnaround_time) / n
+```
+
+Digunakan untuk menilai kinerja algoritma FCFS.
+
    - Bandingkan hasil simulasi dengan perhitungan manual.  
+   
+   Hasil simulasi program sama dengan perhitungan manual, yang berarti algoritma diimplementasikan dengan benar.
+Perbedaannya hanya pada cara pengerjaan:
+
+Manual → lambat dan rawan kesalahan
+
+Simulasi → cepat, konsisten, dan efisien
+
    - Jelaskan kelebihan dan keterbatasan simulasi.
+
+Kelebihan Simulasi
+
+1. Efisien untuk dataset besar
+Tidak perlu menghitung satu per satu secara manual.
+
+2. Akurasi tinggi
+Mengurangi kesalahan manusia.
+
+3. Mudah diuji ulang
+Dataset bisa diganti tanpa mengubah logika.
+
+4. Memudahkan perbandingan algoritma
+Bisa langsung diterapkan ke FCFS, SJF, RR, dll.
+
+Keterbatasan Simulasi
+
+1. Tidak merepresentasikan kondisi sistem nyata sepenuhnya
+Misalnya overhead context switching tidak dihitung.
+
+2. Bergantung pada asumsi
+Semua proses dianggap ideal (tidak ada I/O wait).
+
+3. Membutuhkan pemahaman logika program
+Kesalahan logika akan menghasilkan output yang salah.
 
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+Simulasi algoritma penjadwalan CPU, khususnya FCFS, membantu memahami cara kerja penjadwalan proses secara sistematis berdasarkan waktu kedatangan.
+
+Hasil simulasi yang diperoleh sesuai dengan perhitungan manual, sehingga dapat disimpulkan bahwa program yang dibuat telah berjalan dengan benar.
+
+Penggunaan simulasi mempermudah analisis kinerja algoritma penjadwalan CPU, terutama dalam menghitung waiting time dan turnaround time secara efisien.
 
 ---
 
@@ -113,11 +231,26 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 3. Sajikan output dalam tabel atau grafik.  
 4. Tulis laporan praktikum pada `laporan.md`.
 
+## E. Tugas & Quiz
+### Tugas
+1. Buat program simulasi FCFS atau SJF.  
+2. Jalankan program dengan dataset uji.  
+3. Sajikan output dalam tabel atau grafik.  
+4. Tulis laporan praktikum pada `laporan.md`.
+
 ### Quiz
 Jawab pada bagian **Quiz** di laporan:
 1. Mengapa simulasi diperlukan untuk menguji algoritma scheduling?  
+
+Simulasi diperlukan karena algoritma scheduling bekerja dalam kondisi yang dinamis, seperti waktu kedatangan proses yang berbeda, variasi burst time, serta banyaknya proses yang berjalan bersamaan. Dengan simulasi, kita dapat meniru kondisi sistem operasi yang mendekati keadaan nyata tanpa harus menerapkannya langsung pada sistem sebenarnya. Simulasi juga membantu membandingkan kinerja beberapa algoritma (misalnya FCFS, SJF, Priority, Round Robin) berdasarkan metrik seperti waiting time, turnaround time, dan response time secara lebih objektif.
+
 2. Apa perbedaan hasil simulasi dengan perhitungan manual jika dataset besar?  
+
+
+Pada dataset kecil, hasil simulasi dan perhitungan manual biasanya sama karena prosesnya masih mudah dilacak. Namun, jika dataset besar, perhitungan manual menjadi sangat kompleks, memakan waktu, dan rawan kesalahan manusia. Simulasi dengan bantuan program mampu mengolah data dalam jumlah besar secara cepat dan konsisten, sehingga hasilnya lebih akurat dan efisien dibandingkan perhitungan manual.
 3. Algoritma mana yang lebih mudah diimplementasikan? Jelaskan.
+
+Algoritma yang paling mudah diimplementasikan adalah First Come First Served (FCFS). Hal ini karena FCFS hanya membutuhkan satu antrian berdasarkan urutan kedatangan proses, tanpa perhitungan tambahan seperti prioritas atau time quantum. Logikanya sederhana dan mudah dipahami, sehingga sering digunakan sebagai algoritma dasar untuk pembelajaran, meskipun dari sisi performa tidak selalu optimal.
 
 
 ---
