@@ -22,7 +22,20 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 ---
 
 ## Dasar Teori
-Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
+1. Page Replacement
+Page replacement adalah mekanisme dalam sistem operasi yang digunakan untuk menentukan halaman (page) mana yang harus diganti ketika memori utama (RAM) telah penuh dan terjadi permintaan halaman baru. Tujuan utama dari page replacement adalah meminimalkan jumlah page fault agar kinerja sistem tetap optimal.
+
+2. Page Fault dan Page Hit
+Page fault terjadi ketika halaman yang dibutuhkan oleh proses tidak tersedia di memori utama sehingga sistem harus mengambilnya dari media penyimpanan sekunder (disk). Sebaliknya, page hit terjadi ketika halaman yang diminta sudah tersedia di memori. Semakin sedikit page fault, semakin baik performa sistem.
+
+3. Algoritma FIFO (First In First Out)
+FIFO merupakan algoritma page replacement yang mengganti halaman berdasarkan urutan kedatangan ke memori. Halaman yang pertama kali masuk akan menjadi halaman pertama yang diganti, tanpa mempertimbangkan apakah halaman tersebut masih sering digunakan atau tidak.
+
+4. Algoritma LRU (Least Recently Used)
+LRU adalah algoritma page replacement yang mengganti halaman yang paling lama tidak digunakan. Algoritma ini memanfaatkan riwayat penggunaan halaman dan bekerja berdasarkan prinsip locality of reference, yaitu halaman yang baru digunakan cenderung akan digunakan kembali dalam waktu dekat.
+
+5. Belady’s Anomaly
+Belady’s Anomaly adalah kondisi di mana penambahan jumlah frame memori justru dapat meningkatkan jumlah page fault. Fenomena ini dapat terjadi pada algoritma FIFO, namun tidak terjadi pada algoritma berbasis stack seperti LRU.
 
 ---
 
@@ -132,7 +145,11 @@ Algoritma yang lebih efisien pada simulasi ini adalah LRU (Least Recently Used).
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+- Algoritma page replacement FIFO dan LRU berhasil diimplementasikan dan disimulasikan menggunakan dataset yang telah ditentukan dengan jumlah frame memori sebanyak tiga frame.
+
+- Hasil simulasi menunjukkan bahwa algoritma LRU menghasilkan jumlah page fault yang lebih sedikit dibandingkan FIFO, sehingga LRU memiliki performa yang lebih baik dalam pengelolaan memori.
+
+- LRU lebih efisien karena mempertimbangkan riwayat penggunaan halaman dan sesuai dengan pola akses program nyata, sehingga mampu mengurangi frekuensi akses ke media penyimpanan sekunder dan meningkatkan kinerja sistem secara keseluruhan..
 
 ---
 
