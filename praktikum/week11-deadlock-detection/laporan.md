@@ -5,16 +5,19 @@ Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
 ---
 
 ## Identitas
-- **Nama**  : [Nama Mahasiswa]  
-- **NIM**   : [NIM Mahasiswa]  
-- **Kelas** : [Kelas]
+- **Nama**  : Faik Setyawan
+- **NIM**   : 250202936  
+- **Kelas** : 1IKRA
 
 ---
 
-## Tujuan
-Tuliskan tujuan praktikum minggu ini.  
-Contoh:  
-> Mahasiswa mampu menjelaskan fungsi utama sistem operasi dan peran kernel serta system call.
+## B. Tujuan
+Setelah menyelesaikan tugas ini, mahasiswa mampu:
+1. Membuat program sederhana untuk mendeteksi deadlock.  
+2. Menjalankan simulasi deteksi deadlock dengan dataset uji.  
+3. Menyajikan hasil analisis deadlock dalam bentuk tabel.  
+4. Memberikan interpretasi hasil uji secara logis dan sistematis.  
+5. Menyusun laporan praktikum sesuai format yang ditentukan.
 
 ---
 
@@ -24,10 +27,48 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 ---
 
 ## Langkah Praktikum
-1. Langkah-langkah yang dilakukan.  
-2. Perintah yang dijalankan.  
-3. File dan kode yang dibuat.  
-4. Commit message yang digunakan.
+1. **Menyiapkan Dataset**
+
+   Gunakan dataset sederhana yang berisi:
+   - Daftar proses  
+   - Resource Allocation  
+   - Resource Request / Need
+
+   Contoh tabel:
+
+   | Proses | Allocation | Request |
+   |:--:|:--:|:--:|
+   | P1 | R1 | R2 |
+   | P2 | R2 | R3 |
+   | P3 | R3 | R1 |
+
+2. **Implementasi Algoritma Deteksi Deadlock**
+
+   Program minimal harus:
+   - Membaca data proses dan resource.  
+   - Menentukan apakah sistem berada dalam kondisi deadlock.  
+   - Menampilkan proses mana saja yang terlibat deadlock.
+
+3. **Eksekusi & Validasi**
+
+   - Jalankan program dengan dataset uji.  
+   - Validasi hasil deteksi dengan analisis manual/logis.  
+   - Simpan hasil eksekusi dalam bentuk screenshot.
+
+4. **Analisis Hasil**
+
+   - Sajikan hasil deteksi dalam tabel (proses deadlock / tidak).  
+   - Jelaskan mengapa deadlock terjadi atau tidak terjadi.  
+   - Kaitkan hasil dengan teori deadlock (empat kondisi).
+
+5. **Commit & Push**
+
+   ```bash
+   git add .
+   git commit -m "Minggu 11 - Deadlock Detection"
+   git push origin main
+   ```
+
 
 ---
 
@@ -48,9 +89,9 @@ Sertakan screenshot hasil percobaan atau diagram:
 ---
 
 ## Analisis
-- Jelaskan makna hasil percobaan.  
-- Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).  
-- Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
+   - Sajikan hasil deteksi dalam tabel (proses deadlock / tidak).  
+   - Jelaskan mengapa deadlock terjadi atau tidak terjadi.  
+   - Kaitkan hasil dengan teori deadlock (empat kondisi).
 
 ---
 
@@ -59,13 +100,18 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 
 ---
 
-## Quiz
-1. [Pertanyaan 1]  
-   **Jawaban:**  
-2. [Pertanyaan 2]  
-   **Jawaban:**  
-3. [Pertanyaan 3]  
-   **Jawaban:**  
+## Quiz dan Tugas
+### Tugas
+1. Buat program simulasi deteksi deadlock.  
+2. Jalankan program dengan dataset uji.  
+3. Sajikan hasil analisis dalam tabel dan narasi.  
+4. Tulis laporan praktikum pada `laporan.md`.
+
+### Quiz
+Jawab pada bagian **Quiz** di laporan:
+1. Apa perbedaan antara *deadlock prevention*, *avoidance*, dan *detection*?  
+2. Mengapa deteksi deadlock tetap diperlukan dalam sistem operasi?  
+3. Apa kelebihan dan kekurangan pendekatan deteksi deadlock?
 
 ---
 
