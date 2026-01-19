@@ -5,7 +5,7 @@ Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
 ---
 
 ## Identitas
-- **Nama**  : [Nama Mahasiswa]  
+- **Nama**  : faik
 - **NIM**   : [NIM Mahasiswa]  
 - **Kelas** : [Kelas]
 
