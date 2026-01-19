@@ -4,11 +4,12 @@ Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
 
 ---
 
-## Identitas
-- **Nama**  : faik
-- **NIM**   : [NIM Mahasiswa]  
-- **Kelas** : [Kelas]
-
+## Anggota Kelompok
+1. Faik Setyawan (250202936)
+2. Evelin Natalie (250202916)
+3. Novia Safitri (250202923)
+4. Rafika Rahma (250202917)
+5. Nadya Pramudita(2502029)
 ---
 
 ## Tujuan
