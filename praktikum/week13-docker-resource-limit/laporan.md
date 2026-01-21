@@ -207,6 +207,12 @@ Program tidak sempat menangkap MemoryError Python.
 
 ## Kesimpulan
 
+Berdasarkan praktikum yang telah dilakukan, dapat disimpulkan bahwa Dockerfile berperan penting dalam mendefinisikan proses pembuatan image secara terstruktur dan konsisten. Dengan Dockerfile, aplikasi dapat dijalankan pada lingkungan yang sama tanpa bergantung pada sistem operasi host.
+
+Pengujian menunjukkan bahwa container yang dijalankan **tanpa limit resource** dapat menggunakan CPU dan memori secara bebas hingga mengikuti kapasitas host, sehingga berpotensi mengganggu proses lain. Sebaliknya, penerapan **limit CPU dan memori** membuat eksekusi aplikasi menjadi lebih terkontrol. Program berjalan lebih lambat dan akan dihentikan secara paksa ketika penggunaan memori melebihi batas yang ditentukan.
+
+Hal ini membuktikan bahwa pembatasan resource pada container sangat penting untuk menjaga stabilitas sistem, mencegah pemborosan resource, serta memastikan beberapa container dapat berjalan secara bersamaan dengan aman pada satu host.
+
 
 ---
 
@@ -218,10 +224,17 @@ Program tidak sempat menangkap MemoryError Python.
 4. Sajikan hasil pengamatan dalam tabel/uraian singkat di `laporan.md`.
 
 ### Quiz
-Jawab pada bagian **Quiz** di laporan:
 1. Mengapa container perlu dibatasi CPU dan memori?
+
+Container perlu dibatasi CPU dan memori agar tidak menggunakan resource secara berlebihan yang dapat mengganggu container lain atau sistem host. Pembatasan ini membantu menjaga stabilitas sistem, meningkatkan efisiensi penggunaan resource, serta memastikan setiap aplikasi mendapatkan jatah resource yang sesuai.
+
 2. Apa perbedaan VM dan container dalam konteks isolasi resource?
+
+Virtual Machine (VM) memiliki isolasi resource yang lebih kuat karena setiap VM menjalankan sistem operasi sendiri di atas hypervisor, sehingga resource dialokasikan secara penuh. Sementara itu, container berbagi kernel sistem operasi host, sehingga isolasi resource lebih ringan dan efisien, namun bergantung pada mekanisme limit seperti CPU dan memori untuk menghindari konflik penggunaan resource.
+
 3. Apa dampak limit memori terhadap aplikasi yang boros memori?
+
+Limit memori dapat menyebabkan aplikasi yang boros memori berjalan lebih lambat, mengalami error, atau bahkan dihentikan secara paksa (OOM Kill) oleh Docker ketika penggunaan memori melebihi batas yang ditentukan. Hal ini mendorong pengembang untuk membuat aplikasi yang lebih efisien dalam penggunaan memori.
 
 ---
 
